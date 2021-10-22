@@ -1,0 +1,19 @@
+config:
+  target: "http://localhost:5000/trade"
+  phases:
+    - duration: 4
+      arrivalRate: 250
+scenarios:
+  - flow:
+      - post:
+          url: "/create"
+          json:
+            userId: "134256"
+            currencyFrom: "EUR"
+            currencyTo: "GBP"
+            amountSell: 1000
+            amountBuy: 747.10
+            rate: 0.7471
+            timePlaced: "31-Dec-20 10:27:44"
+            originatingCountry: "FR"
+        count: 1
